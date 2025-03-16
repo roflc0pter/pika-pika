@@ -29,7 +29,7 @@ const queryClient = new QueryClient({
         ) {
           return false;
         }
-        return failureCount < 5; // Retry up to 5 times for other errors
+        return failureCount < 5;
       },
     },
   },

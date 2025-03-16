@@ -22,7 +22,9 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+
+    "types": ["vitest/globals"]
   },
-  "include": ["src"]
+  "include": ["src", "test"]
 }

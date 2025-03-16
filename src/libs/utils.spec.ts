@@ -1,4 +1,4 @@
-import { capitalizeFirstLetter, filterByLanguage } from "./utils"; // Passe den Import-Pfad an
+import { capitalizeFirstLetter, filterByLanguage } from "./utils";
 
 describe("capitalizeFirstLetter", () => {
   it("should capitalize the first letter of a word", () => {

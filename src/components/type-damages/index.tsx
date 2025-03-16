@@ -17,8 +17,8 @@ export const TypeDamages: FC<TypeDamagesProps> = ({ title, typeResource }) => {
       {typeResource?.length ? (
         <Flex wrap gap="small" role="list">
           {typeResource.map(({ name }) => (
-            <span role="listitem">
-              <TypeLogo key={name} typeName={name} />
+            <span key={name} role="listitem">
+              <TypeLogo typeName={name} />
             </span>
           ))}
         </Flex>
