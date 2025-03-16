@@ -34,19 +34,17 @@ export const PokeListItem: FC<PokeListItemProps> = ({
   });
 
   return (
-    <div role="listitem">
-      <Card
-        size={size === "small" ? "small" : "default"}
-        className={className}
-        onClick={handleCardClick}
-        loading={isLoading}
-        hoverable
-        role="button"
-        tabIndex={0}
-        aria-label={`View details of ${pokemon?.name}`}
-      >
-        <PokeCover pokemon={pokemon} size={size} />
-      </Card>
-    </div>
+    <Card
+      size={size === "small" ? "small" : "default"}
+      className={className}
+      onClick={handleCardClick}
+      loading={isLoading}
+      hoverable
+      role="button"
+      tabIndex={0}
+      aria-label={`View details of ${pokemon?.name}`}
+    >
+      <PokeCover pokemon={pokemon} size={size} />
+    </Card>
   );
 };

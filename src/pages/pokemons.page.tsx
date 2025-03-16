@@ -1,8 +1,8 @@
 import { Divider, Flex, Spin } from "antd";
 import { PokeList } from "features/poke-list/poke-list";
+import { useFetchInfinitePokemons } from "hooks/pokemon.hook";
 import { FC } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
-import { useFetchInfinitePokemons } from "hooks/pokemon.hook";
 
 export const PokemonsPage: FC = () => {
   const {
@@ -10,7 +10,7 @@ export const PokemonsPage: FC = () => {
     isLoading,
     fetchNextPage,
     hasNextPage,
-  } = useFetchInfinitePokemons();
+  } = useFetchInfinitePokemons({ limit: 80, offset: 0 });
 
   if (isLoading) {
     return (
@@ -29,9 +29,9 @@ export const PokemonsPage: FC = () => {
       next={fetchNextPage}
       hasMore={hasNextPage}
       loader={<Flex justify="center">Loading...</Flex>}
-      endMessage={<Divider plain>It is all, nothing more 🤐</Divider>}
+      endMessage={<Divider plain>It is all, nothing more</Divider>}
       scrollableTarget="scrollableDiv"
-      scrollThreshold={"800px"}
+      scrollThreshold={0.95}
     >
       <PokeList names={pokemonNames} />
     </InfiniteScroll>

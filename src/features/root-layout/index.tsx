@@ -22,8 +22,6 @@ export const RootLayout: FC = () => {
     pathSegments[pathSegments.length - 1],
   );
 
-  console.log("pageTitle", pageTitle);
-
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <Affix>
@@ -35,6 +33,7 @@ export const RootLayout: FC = () => {
                   aria-label="Go Back"
                   size="large"
                   shape="circle"
+                  type="text"
                   icon={<ArrowLeftOutlined />}
                   onClick={() => navigate({ to: "/pokemons" })}
                 />

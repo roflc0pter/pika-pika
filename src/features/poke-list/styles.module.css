@@ -3,13 +3,14 @@
 }
 
 .poke-list-item {
-  width: 360px;
-  flex: 0 0 auto;
+  min-width: 240px;
+  max-width: 480px;
+  flex: 1 1 auto;
   overflow: hidden;
   background-color: var(--ant-blue-1);
   border: 1px solid var(--ant-blue-10);
 }
 
 .poke-list-item.small {
-  width: 160px;
+  min-width: 120px;
 }

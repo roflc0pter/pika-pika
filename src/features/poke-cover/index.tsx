@@ -49,7 +49,7 @@ export const PokeCover: FC<PokeCoverProps> = ({ pokemon, size = "middle" }) => {
       <Typography.Title
         level={size === "small" ? 5 : 3}
         aria-level={1}
-        style={{ textAlign: "center" }}
+        style={{ textAlign: "center", margin: 0 }}
       >
         {capitalizeFirstLetter(pokemon?.name)}
       </Typography.Title>

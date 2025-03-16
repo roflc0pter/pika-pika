@@ -10,6 +10,8 @@ const routeTree = rootRoute.addChildren([
 
 export const router = createRouter({
   routeTree: routeTree,
+  scrollRestoration: true,
+  scrollRestorationBehavior: "smooth",
   defaultPreload: "intent",
   defaultPreloadStaleTime: 0,
   defaultErrorComponent: ({ error }) => <UnexpectedError error={error} />,

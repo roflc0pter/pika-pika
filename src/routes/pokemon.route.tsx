@@ -1,7 +1,7 @@
 import { createRoute } from "@tanstack/react-router";
-import { rootIndexRoute } from "routes/root.route";
 import { PokemonPage } from "pages/pokemon.page";
 import { PokemonsPage } from "pages/pokemons.page";
+import { rootIndexRoute } from "routes/root.route";
 
 export const pokemonsRoute = createRoute({
   getParentRoute: () => rootIndexRoute,

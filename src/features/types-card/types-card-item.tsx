@@ -27,25 +27,25 @@ export const TypesCardItem: FC<TypesCardItemProps> = ({ typeName }) => {
       <Row gutter={[padding, padding]} align="middle">
         <Col span={24}>
           <Row gutter={[padding, padding]}>
-            <Col span={12}>
+            <Col xs={24} lg={12}>
               <TypeDamages
                 title="Strong Against"
                 typeResource={typeData?.damage_relations.double_damage_to}
               />
             </Col>
-            <Col span={12}>
+            <Col xs={24} lg={12}>
               <TypeDamages
                 title="Weak Against"
                 typeResource={typeData?.damage_relations.double_damage_from}
               />
             </Col>
-            <Col span={12}>
+            <Col xs={24} lg={12}>
               <TypeDamages
                 title="Resistant To"
                 typeResource={typeData?.damage_relations.half_damage_from}
               />
             </Col>
-            <Col span={12}>
+            <Col xs={24} lg={12}>
               <TypeDamages
                 title="No Effect From"
                 typeResource={typeData?.damage_relations.no_damage_from}
