@@ -1,0 +1,13 @@
+.cover-image {
+  height: 200px;
+  width: 100%;
+}
+
+.cover-image.small {
+  height: 100px;
+}
+
+.ant-image-img.cover-image-img {
+  height: 100%;
+  object-fit: contain;
+}
