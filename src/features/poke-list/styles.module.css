@@ -1,0 +1,15 @@
+.poke-list-horizontal {
+  overflow-x: scroll;
+}
+
+.poke-list-item {
+  width: 360px;
+  flex: 0 0 auto;
+  overflow: hidden;
+  background-color: var(--ant-blue-1);
+  border: 1px solid var(--ant-blue-10);
+}
+
+.poke-list-item.small {
+  width: 160px;
+}

@@ -20,6 +20,17 @@ const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       refetchOnWindowFocus: false,
+      retry: (failureCount, error) => {
+        if (
+          axios.isAxiosError(error) &&
+          error?.status &&
+          error?.status >= 400 &&
+          error?.status < 500
+        ) {
+          return false;
+        }
+        return failureCount < 5; // Retry up to 5 times for other errors
+      },
     },
   },
   queryCache: new QueryCache({

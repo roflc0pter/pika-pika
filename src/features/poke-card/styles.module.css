@@ -1,0 +1,4 @@
+.poke-card {
+  background-color: var(--ant-blue-1);
+  border: 1px solid var(--ant-blue-10);
+}

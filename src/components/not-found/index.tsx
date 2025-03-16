@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { Button, Result } from "antd";
+import { Button, Result, ResultProps } from "antd";
 import { FC } from "react";
 
-export const NotFound: FC = () => {
+export const NotFound: FC<ResultProps> = (props) => {
   return (
     <Result
       status="404"
@@ -13,6 +13,7 @@ export const NotFound: FC = () => {
           <Link to="/">Back Home</Link>
         </Button>
       }
+      {...props}
     />
   );
 };
