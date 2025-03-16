@@ -14,8 +14,8 @@ export const PokeAbilities: FC<PokeAbilitiesProps> = ({ pokeAbilities }) => {
   return (
     <div role="list">
       {pokeAbilities?.map((ability) => (
-        <div role="listitem">
-          <PokeAbility key={ability.ability.name} pokeAbility={ability} />
+        <div role="listitem" key={ability.ability.name}>
+          <PokeAbility pokeAbility={ability} />
         </div>
       ))}
     </div>
